@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+body{
+    background: #010405;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background:linear-gradient(to top, #010405, transparent);
+    z-index: 10000;
+}
+.sec{
+    position:relative;
+    padding: 100px;
+    text-align: center;
+    align-items: center;
+}
+.sec h2{
+    align-items: center;
+    font-size: 3rem;
+    color:#ff9425;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+img{
+    background-size: contain;
+    max-width: 100%;
+    height: auto;
+}
+.sec p{
+    font-size: 1.2rem;
+    color:#e6b888;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+section img{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+}
+#bg-murciegalos{
+    z-index: 100;
+    width: 850px;
+    height: 600px;
+    transform: translate(500px, -150px);
+}
+#bg-murciegalos2{
+    width: 850px;
+    height: 700px;
+    z-index: 100;
+}
+#montaña{
+    z-index: 200;
+}
+#flyingman{
+    z-index: 150;
+    width: 650px;
+    height: 600px;
+    transform: rotateZ(20deg);
+}
+
+@media (max-width: 1200px){
+    #bg{
+        align-items: center;
+        object-fit: cover;
+      }
+}
+
+@media (max-width: 600px) {
+    #flyingman{
+    visibility: hidden;
+    }
+    #castle-img{
+        visibility: hidden;
+    }
+  #bg{
+    align-items: center;
+    object-fit: cover;
+  }
+  #montaña{
+    visibility: hidden;
+  }
+  .sec h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.sec p{
+    font-size: 1rem;
+}
+}
+
+@media (max-width: 252px){
+    .sec h2{
+        font-size: 1.5rem;
+        transform: translate(-50px);
+    }
+    .sec p{
+        font-size: 0.7rem;
+        transform: translate(-50px);
+    }
+}
+
+@media (max-width: 199px){
+    #bg{
+        visibility: hidden;
+    }
+    section{
+        height:0;
+    }
+}
